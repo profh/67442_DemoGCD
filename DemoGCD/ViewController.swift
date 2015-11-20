@@ -16,12 +16,12 @@ class ViewController: UIViewController {
   @IBOutlet weak var sithLord1: UILabel!
   @IBOutlet weak var sithLord2: UILabel!
   @IBOutlet weak var sithLord3: UILabel!
-  
+  @IBOutlet weak var elapsedTimeLabel: UILabel!
+  let stopwatch = Stopwatch()
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-
   
   func updateJedi() {
     sleep(3)
@@ -37,8 +37,39 @@ class ViewController: UIViewController {
   }
   
   @IBAction func updateLists() {
-    updateJedi()
+    stopwatch.start()
+    
+    dispatch_async(dispatch_get_main_queue(), {
+      self.updateJedi()
+      self.stopTimer()
+    })
+    
+//    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), {
+//      self.updateJedi()
+//      self.stopTimer()
+//    })
+    
+//    dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), {
+//      self.updateJedi()
+//      self.stopTimer()
+//    })
+    
+//    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), {
+//      self.updateJedi()
+//      self.stopTimer()
+//    })
+    
+//    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0), {
+//      self.updateJedi()
+//      self.stopTimer()
+//    })
+    
     updateSith()
+  }
+  
+  func stopTimer() {
+    stopwatch.stop()
+    elapsedTimeLabel.text = stopwatch.elapsedTimeAsString
   }
 
 }

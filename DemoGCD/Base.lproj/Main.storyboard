@@ -115,16 +115,28 @@
                                     <action selector="updateLists" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JN6-LM-oVV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-qR-hhm">
+                                <rect key="frame" x="134" y="368" width="106" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="gem-Mt-UeP"/>
+                                    <constraint firstAttribute="width" constant="106" id="wHC-et-R0Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.83927162249999998" blue="0.41937889020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90965190880000002" green="0.97657142870000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99291745580000002" green="0.94412659529999998" blue="0.8669498605" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="OkJ-Xi-put" secondAttribute="trailing" constant="10" id="241-ZG-4Yk"/>
                             <constraint firstItem="H10-Pt-bhh" firstAttribute="top" secondItem="vjI-yU-Uvg" secondAttribute="bottom" constant="41" id="5ml-NI-tcD"/>
+                            <constraint firstItem="QfM-qR-hhm" firstAttribute="top" secondItem="8UZ-Oh-gVx" secondAttribute="bottom" constant="19" id="779-NN-zYo"/>
                             <constraint firstItem="W2t-NG-dhu" firstAttribute="top" secondItem="Gwo-2q-XRT" secondAttribute="bottom" constant="8" id="DMj-lh-7ke"/>
                             <constraint firstItem="3Jc-Aa-NEU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="EKg-Bb-aw0"/>
                             <constraint firstItem="3Jc-Aa-NEU" firstAttribute="top" secondItem="vjI-yU-Uvg" secondAttribute="bottom" constant="43" id="GmJ-ln-pA4"/>
                             <constraint firstItem="Gwo-2q-XRT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="JDl-2m-79N"/>
                             <constraint firstAttribute="centerX" secondItem="8UZ-Oh-gVx" secondAttribute="centerX" id="L5U-zD-Suj"/>
+                            <constraint firstAttribute="centerX" secondItem="QfM-qR-hhm" secondAttribute="centerX" id="Oot-5w-5W8"/>
                             <constraint firstItem="Gwo-2q-XRT" firstAttribute="top" secondItem="Ow3-rF-iBu" secondAttribute="bottom" constant="8" id="T0T-T7-aZf"/>
                             <constraint firstItem="OkJ-Xi-put" firstAttribute="top" secondItem="qDV-Qn-M3f" secondAttribute="bottom" constant="8" id="Zbg-q9-kNJ"/>
                             <constraint firstItem="Ow3-rF-iBu" firstAttribute="top" secondItem="3Jc-Aa-NEU" secondAttribute="bottom" constant="19.5" id="cwT-Tc-re4"/>
@@ -143,6 +155,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="elapsedTimeLabel" destination="QfM-qR-hhm" id="Bfk-9E-i0A"/>
                         <outlet property="jediMaster1" destination="Ow3-rF-iBu" id="6sP-GN-cxe"/>
                         <outlet property="jediMaster2" destination="Gwo-2q-XRT" id="7rv-24-xwY"/>
                         <outlet property="jediMaster3" destination="W2t-NG-dhu" id="RBd-Ze-nrB"/>
