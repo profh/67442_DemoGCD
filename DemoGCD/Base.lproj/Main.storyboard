@@ -1,25 +1,159 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DemoGCD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GCD Demo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjI-yU-Uvg">
+                                <rect key="frame" x="85" y="64" width="204" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="0ut-fH-ui8"/>
+                                    <constraint firstAttribute="height" constant="50" id="mr4-f0-jz5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jedi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jc-Aa-NEU">
+                                <rect key="frame" x="66" y="157" width="53.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H10-Pt-bhh">
+                                <rect key="frame" x="239" y="155" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="QcQ-7p-Ow7"/>
+                                    <constraint firstAttribute="height" constant="30" id="jha-yA-0IH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jedi Master 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow3-rF-iBu">
+                                <rect key="frame" x="26" y="206" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="LD5-hN-8MX"/>
+                                    <constraint firstAttribute="width" constant="150" id="fH5-Vm-Pnu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sith Lord 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJu-UV-LUd">
+                                <rect key="frame" x="199" y="206" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="12w-Yg-D3h"/>
+                                    <constraint firstAttribute="height" constant="25" id="uuc-XU-XSp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sith Lord 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDV-Qn-M3f">
+                                <rect key="frame" x="199" y="239" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="VCT-bL-9Pm"/>
+                                    <constraint firstAttribute="width" constant="150" id="riY-VS-6gl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sith Lord 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-Xi-put">
+                                <rect key="frame" x="199" y="272" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Byd-QD-qU0"/>
+                                    <constraint firstAttribute="height" constant="25" id="otx-be-5Rl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jedi Master 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-2q-XRT">
+                                <rect key="frame" x="26" y="239" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZPk-fM-bbc"/>
+                                    <constraint firstAttribute="height" constant="25" id="t0Y-dO-xkJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jedi Master 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2t-NG-dhu">
+                                <rect key="frame" x="26" y="272" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="6Fw-2c-b8E"/>
+                                    <constraint firstAttribute="width" constant="150" id="Yl0-sP-aF2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UZ-Oh-gVx">
+                                <rect key="frame" x="134" y="319" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gzi-mf-vXe"/>
+                                    <constraint firstAttribute="width" constant="106" id="gzo-Hn-gZ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Update Lists">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateLists" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JN6-LM-oVV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90965190880000002" green="0.97657142870000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OkJ-Xi-put" secondAttribute="trailing" constant="10" id="241-ZG-4Yk"/>
+                            <constraint firstItem="H10-Pt-bhh" firstAttribute="top" secondItem="vjI-yU-Uvg" secondAttribute="bottom" constant="41" id="5ml-NI-tcD"/>
+                            <constraint firstItem="W2t-NG-dhu" firstAttribute="top" secondItem="Gwo-2q-XRT" secondAttribute="bottom" constant="8" id="DMj-lh-7ke"/>
+                            <constraint firstItem="3Jc-Aa-NEU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="EKg-Bb-aw0"/>
+                            <constraint firstItem="3Jc-Aa-NEU" firstAttribute="top" secondItem="vjI-yU-Uvg" secondAttribute="bottom" constant="43" id="GmJ-ln-pA4"/>
+                            <constraint firstItem="Gwo-2q-XRT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="JDl-2m-79N"/>
+                            <constraint firstAttribute="centerX" secondItem="8UZ-Oh-gVx" secondAttribute="centerX" id="L5U-zD-Suj"/>
+                            <constraint firstItem="Gwo-2q-XRT" firstAttribute="top" secondItem="Ow3-rF-iBu" secondAttribute="bottom" constant="8" id="T0T-T7-aZf"/>
+                            <constraint firstItem="OkJ-Xi-put" firstAttribute="top" secondItem="qDV-Qn-M3f" secondAttribute="bottom" constant="8" id="Zbg-q9-kNJ"/>
+                            <constraint firstItem="Ow3-rF-iBu" firstAttribute="top" secondItem="3Jc-Aa-NEU" secondAttribute="bottom" constant="19.5" id="cwT-Tc-re4"/>
+                            <constraint firstAttribute="centerX" secondItem="vjI-yU-Uvg" secondAttribute="centerX" id="cwk-Xw-w3u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qDV-Qn-M3f" secondAttribute="trailing" constant="10" id="ePo-Lk-6qC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oJu-UV-LUd" secondAttribute="trailing" constant="10" id="ejy-tK-3pE"/>
+                            <constraint firstAttribute="centerX" secondItem="8UZ-Oh-gVx" secondAttribute="centerX" id="i77-iv-o0N"/>
+                            <constraint firstItem="qDV-Qn-M3f" firstAttribute="top" secondItem="oJu-UV-LUd" secondAttribute="bottom" constant="8" id="iJ8-Xu-scl"/>
+                            <constraint firstItem="oJu-UV-LUd" firstAttribute="top" secondItem="H10-Pt-bhh" secondAttribute="bottom" constant="21" id="kZf-2b-bK1"/>
+                            <constraint firstItem="vjI-yU-Uvg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="44" id="lN8-hs-076"/>
+                            <constraint firstItem="Ow3-rF-iBu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="mog-xm-3Jo"/>
+                            <constraint firstItem="8UZ-Oh-gVx" firstAttribute="top" secondItem="OkJ-Xi-put" secondAttribute="bottom" constant="22" id="oNn-bP-4bv"/>
+                            <constraint firstItem="W2t-NG-dhu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="uLa-ev-BQM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H10-Pt-bhh" secondAttribute="trailing" constant="50" id="z6c-1o-uLc"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="jediMaster1" destination="Ow3-rF-iBu" id="6sP-GN-cxe"/>
+                        <outlet property="jediMaster2" destination="Gwo-2q-XRT" id="7rv-24-xwY"/>
+                        <outlet property="jediMaster3" destination="W2t-NG-dhu" id="RBd-Ze-nrB"/>
+                        <outlet property="sithLord1" destination="oJu-UV-LUd" id="FYB-N3-Ndu"/>
+                        <outlet property="sithLord2" destination="qDV-Qn-M3f" id="10V-1D-pq4"/>
+                        <outlet property="sithLord3" destination="OkJ-Xi-put" id="lb8-MT-qU2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="388.5"/>
         </scene>
     </scenes>
 </document>
